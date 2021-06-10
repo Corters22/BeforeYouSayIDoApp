@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    var answers = [];
+    var answers = {};
 
     $("#next").click(function(){
         $("#page1").hide();
@@ -8,7 +8,7 @@ $(document).ready(function(){
         $("#btnSubmit").removeAttr('style');
     });
     $("#btnSubmit").click(function(){
-        answers = [];
+        answers = {};
         if ($("#sel1").val() == '') {
             alert('Please select a value from the drop down for question 1.');
             return;
@@ -50,17 +50,47 @@ $(document).ready(function(){
             return;
         }
 
-        answers.push($("#sel1").val());
-        answers.push($("#sel2").val());
-        answers.push($("#sel3").val());
-        answers.push($("#sel4").val());
-        answers.push($("#sel5").val());
-        answers.push($("#sel6").val());
-        answers.push($("#sel7").val());
-        answers.push($("#sel8").val());
-        answers.push($("#sel9").val());
-        answers.push($("#sel10").val());
+        // answers.push($("#sel1").val());
+        // answers.push($("#sel2").val());
+        // answers.push($("#sel3").val());
+        // answers.push($("#sel4").val());
+        // answers.push($("#sel5").val());
+        // answers.push($("#sel6").val());
+        // answers.push($("#sel7").val());
+        // answers.push($("#sel8").val());
+        // answers.push($("#sel9").val());
+        // answers.push($("#sel10").val());
+
+        answers['Q40'] = $("#sel1").val()
+        answers['Q38'] = $("#sel2").val()
+        answers['Q12'] = $("#sel3").val()
+        answers['Q19'] = $("#sel4").val()
+        answers['Q16'] = $("#sel5").val()
+        answers['Q18'] = $("#sel6").val()
+        answers['Q20'] = $("#sel7").val()
+        answers['Q15'] = $("#sel8").val()
+        answers['Q9'] = $("#sel9").val()
+        answers['Q36'] = $("#sel10").val()
 
         console.log(answers)
+
+       
+        function make_prediction(userAnswers){
+            d3.json(`/prediction/${userAnswers}`).then((data) => {
+                var predictor= data;
+
+                if (predictor=1){
+                    var gif_url = 'https://tenor.com/view/avocado-love-cute-hearts-kiss-gif-17628872'
+                    console.log('couple should get married')
+                }
+                else {
+                    var gif_url = 'https://bestanimations.com/uploads/gifs/832552745broken-heart-animation13.gif'
+                    console.log('couple should break up')
+                }
+            })    
+        }
+
+        make_prediction(answers);
     });
 });
+

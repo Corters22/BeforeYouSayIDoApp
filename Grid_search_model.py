@@ -70,15 +70,18 @@ print(classification_report(y_test, predictions,
 #//////////////////////////////////////////////
 # Testing model on new data
 #/////////////////////////////////////////////
-my_answers = [1, 0, 4, 4, 3, 4, 4, 3, 3, 0]
-pred_columns = X.columns
+def make_prediction(answers):
+    # my_answers = [1, 0, 4, 4, 3, 4, 4, 3, 3, 0]
+    # pred_columns = X.columns
 
-#Transposing list of answers to dataframe to match model shape
-pred_df = pd.DataFrame(my_answers).transpose()
-pred_df.columns = pred_columns
+    #Transposing list of answers to dataframe to match model shape
+    pred_df = pd.DataFrame(answers)
+    # pred_df.columns = pred_columns
 
-# making prediction on new data
-grid.predict(pred_df)
+    # making prediction on new data
+    prediction = grid.predict(pred_df)
+
+    return prediction
 
 #///////////////////////////////////////////////
 # Saving model to use later
@@ -91,6 +94,8 @@ grid.predict(pred_df)
 import joblib
 filename = 'grid_search.sav'
 joblib.dump(grid, filename)
+
+
 
 
 

@@ -27,3 +27,11 @@ future plans:
 	1. add database 
 	2. add all questions to answer and info goes into database
 	3. add button to redo model with new data
+
+PRESENTATION:
+
+elevator pitch - quick, attention grabbing, why are we doing the machine learning, who is the audience
+	1. Divorce affects over 50% of marriages in the United States. In order to decrease that percentage, we created an application that can assist couples in 
+	their decisions about marriage. Should you get married, should you break up? Take this short test to find out before you invest more time and money in a 
+	relationship that isn't going to work.
+	2. 
