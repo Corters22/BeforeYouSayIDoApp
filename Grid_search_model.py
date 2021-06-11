@@ -72,11 +72,11 @@ print(classification_report(y_test, predictions,
 #/////////////////////////////////////////////
 def make_prediction(answers):
     # my_answers = [1, 0, 4, 4, 3, 4, 4, 3, 3, 0]
-    # pred_columns = X.columns
+    pred_columns = X.columns
 
     #Transposing list of answers to dataframe to match model shape
     pred_df = pd.DataFrame(answers)
-    # pred_df.columns = pred_columns
+    pred_df.columns = pred_columns
 
     # making prediction on new data
     prediction = grid.predict(pred_df)

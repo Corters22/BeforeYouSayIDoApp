@@ -27,7 +27,6 @@ model = joblib.load('grid_search.sav')
 #################################################
 @app.route("/")
 def home():
-    
     return render_template('index.html')
 
 @app.route('/api_options')
@@ -48,6 +47,16 @@ def demo():
 def prediction_gif(answers):
     prediction = grid_search.make_prediction(answers)
     return prediction
+
+# @app.route('/questions')
+# def next_button():
+#     if request.method == 'POST':
+#         if request.form['Next button'] == 'Click Here':
+#             request.form['#page2']
+
+# @app.route('/visualizations')
+# def visualizations():
+#     return charts
 
 if __name__ == '__main__':
     app.run(debug=True)
