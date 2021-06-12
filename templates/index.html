@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html >
 <head>
     <title>BeforeYouSayIDo</title>
     <meta charset="utf-8">
@@ -17,172 +17,173 @@
  
     
 </head>
-<body style="overflow:hidden;background-image: url('/static/images/pink.jpg');background-size:cover;background-repeat:no-repeat;font-family: 'Trirong', serif';">
+<body style="font-family: 'Trirong', serif';">
+    <div style="background-image: url('/static/images/pink.jpg');background-size:cover;background-repeat:no-repeat;width:100vw;height:100vh;">
+        <div class="navbarmenu" id="navigation">
 
-    <div class="navbarmenu" id="navigation">
-
-        <div style="text-align:center;">
-            <div style="font-size: 25px;font-weight:bold;">
-                <a class="menuitem mr-3" href="/" style="color: darkblue;">Home</a>
-                <a class="menuitem mr-3" href="/api/divorcedata" style="color: darkblue;">Data</a>
-                <a class="menuitem mr-3" href="/visualizations" style="color: darkblue;">Visualizations</a>
-                <a class="menuitem" href="Comparison.html" style="color: darkblue;">Full Test</a>
+            <div style="text-align:center;">
+                <div style="font-size: 25px;font-weight:bold;">
+                    <a class="menuitem mr-3" href="/" style="color: darkblue;">Home</a>
+                    <a class="menuitem mr-3" href="/api/divorcedata" style="color: darkblue;">Data</a>
+                    <a class="menuitem mr-3" href="/visualizations" style="color: darkblue;">Visualizations</a>
+                    <a class="menuitem" href="Comparison.html" style="color: darkblue;">Full Test</a>
+                </div>
             </div>
-        </div>
-
-    </div>
-    <div class="container">
-        <div style="margin-top: 150px;" class="d-flex flex-wrap justify-content-center" id='header'>
-            <div><span style="font-size: 50px;font-weight: bold;color:darkblue;">Before You Say I Do</span></div>
-        </div>
-        <div id='page1'>
-            <div class="d-flex flex-wrap justify-content-center mt-3"><span style="font-size: 35px;font-weight: bold;color:darkblue;">Is your relationship going to last?</span></div>
-            <div class="d-flex flex-wrap justify-content-center mt-3"><span style="font-size: 35px;font-weight: bold;color:darkblue;">Take this short test to find out!</span></div>
-            <div class="d-flex flex-wrap justify-content-center mt-3"><input id='next' type="button" style="font-size: 30px;font-weight: bold;color:darkblue;background-color: hotpink;" value="Click Here" name='Next button'></input></div>
-        </div>
-        <div id='page2' class="d-flex flex-wrap justify-content-center mt-3" style="visibility: hidden;">
-            <div>
-                <table>
-                    <tr>
-                        <td>Q1: We're just starting a discussion before I know what's going on.</td>
-                        <td>
-                            <select class="form-control" id="sel1">
-                                <option value=""></option>
-                                <option value="0">0</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                              </select>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Q2: I hate my spouse's way of opening a subject.</td>
-                        <td>
-                            <select class="form-control" id="sel2">
-                                <option value=""></option>
-                                <option value="0">0</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                              </select>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Q3: My spouse and I have similar values in terms of personal freedom.</td>
-                        <td>
-                            <select class="form-control" id="sel3">
-                                <option value=""></option>
-                                <option value="0">0</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                              </select>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Q4: My spouse and I have similar ideas about how roles should be in marriage.</td>
-                        <td>
-                            <select class="form-control" id="sel4">
-                                <option value=""></option>
-                                <option value="0">0</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                              </select>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Q5: I'm compatible with my spouse about what love should be.</td>
-                        <td>
-                            <select class="form-control" id="sel5">
-                                <option value=""></option>
-                                <option value="0">0</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                              </select>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Q6: My spouse and I have similar ideas about how marriage should be.</td>
-                        <td>
-                            <select class="form-control" id="sel6">
-                                <option value=""></option>
-                                <option value="0">0</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                              </select>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Q7: My spouse and I have similar values in trust.</td>
-                        <td>
-                            <select class="form-control" id="sel7">
-                                <option value=""></option>
-                                <option value="0">0</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                              </select>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Q8: My dreams with my spouse are similar and harmonious.</td>
-                        <td>
-                            <select class="form-control" id="sel8">
-                                <option value=""></option>
-                                <option value="0">0</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                              </select>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Q9: I enjoy traveling with my spouse.</td>
-                        <td>
-                            <select class="form-control" id="sel9">
-                                <option value=""></option>
-                                <option value="0">0</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                              </select>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Q10: It can be humiliating when we have discussions.</td>
-                        <td>
-                            <select class="form-control" id="sel10">
-                                <option value=""></option>
-                                <option value="0">0</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                              </select>
-                        </td>
-                    </tr>
-                </table>
-            </div>
-        </div>
-        
-        <div id='btnSubmit' class="d-flex flex-wrap justify-content-center" style="visibility:hidden;"><button id='btnSubmit' type="button" class="btn btn-success">Submit</button></div>
-        <div id='page3' class="d-flex flex-wrap justify-content-center mt-3" style="visibility: hidden;">
     
-            <img id='result'>
         </div>
-    </div>
+
+        <div class="container">
+            <div style="margin-top: 150px;" class="d-flex flex-wrap justify-content-center" id='header'>
+                <div><span style="font-size: 50px;font-weight: bold;color:darkblue;">Before You Say I Do</span></div>
+            </div>
+            <div id='page1'>
+                <div class="d-flex flex-wrap justify-content-center mt-3"><span style="font-size: 35px;font-weight: bold;color:darkblue;">Is your relationship going to last?</span></div>
+                <div class="d-flex flex-wrap justify-content-center mt-3"><span style="font-size: 35px;font-weight: bold;color:darkblue;">Take this short test to find out!</span></div>
+                <div class="d-flex flex-wrap justify-content-center mt-3"><input id='next' type="button" style="font-size: 30px;font-weight: bold;color:darkblue;background-color: hotpink;" value="Click Here" name='Next button'></input></div>
+            </div>
+
+            <div id='page2'  style="display: none;height:0;">
+                <div class="d-flex flex-wrap justify-content-center mt-3">
+                    <table>
+                        <tr>
+                            <td>Q1: We're just starting a discussion before I know what's going on.</td>
+                            <td>
+                                <select class="form-control" id="sel1">
+                                    <option value=""></option>
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                  </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Q2: I hate my spouse's way of opening a subject.</td>
+                            <td>
+                                <select class="form-control" id="sel2">
+                                    <option value=""></option>
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                  </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Q3: My spouse and I have similar values in terms of personal freedom.</td>
+                            <td>
+                                <select class="form-control" id="sel3">
+                                    <option value=""></option>
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                  </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Q4: My spouse and I have similar ideas about how roles should be in marriage.</td>
+                            <td>
+                                <select class="form-control" id="sel4">
+                                    <option value=""></option>
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                  </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Q5: I'm compatible with my spouse about what love should be.</td>
+                            <td>
+                                <select class="form-control" id="sel5">
+                                    <option value=""></option>
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                  </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Q6: My spouse and I have similar ideas about how marriage should be.</td>
+                            <td>
+                                <select class="form-control" id="sel6">
+                                    <option value=""></option>
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                  </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Q7: My spouse and I have similar values in trust.</td>
+                            <td>
+                                <select class="form-control" id="sel7">
+                                    <option value=""></option>
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                  </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Q8: My dreams with my spouse are similar and harmonious.</td>
+                            <td>
+                                <select class="form-control" id="sel8">
+                                    <option value=""></option>
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                  </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Q9: I enjoy traveling with my spouse.</td>
+                            <td>
+                                <select class="form-control" id="sel9">
+                                    <option value=""></option>
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                  </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Q10: It can be humiliating when we have discussions.</td>
+                            <td>
+                                <select class="form-control" id="sel10">
+                                    <option value=""></option>
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                  </select>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="d-flex flex-wrap justify-content-center"><button id='btnSubmit' type="button" class="btn btn-success">Submit</button></div>
+            </div>
+        </div>
+        <div id='page3' class="d-flex flex-wrap justify-content-center mt-3" style="display: none;">
+            <img id='result'>
+        </div> 
+    </div> 
 
     <!-- <script src="/js/functions.js"></script> -->
     <script src="../static/js/results.js"></script>

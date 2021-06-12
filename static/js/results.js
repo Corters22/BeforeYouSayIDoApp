@@ -5,7 +5,7 @@ $(document).ready(function(){
         $("#page1").hide();
         $("#header").attr('style','margin-top: 50px;')
         $("#page2").removeAttr('style');
-        $("#btnSubmit").removeAttr('style');
+        // $("#btnSubmit").removeAttr('style');
     });
     $("#btnSubmit").click(function(){
         var answers = {};
