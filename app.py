@@ -43,10 +43,10 @@ def api_list():
 def demo():
     return jsonify(data.questions())
 
-@app.route("/prediction/<answers>")
-def prediction_gif(answers):
-    prediction = grid_search.make_prediction(answers)
-    return prediction
+# @app.route("/prediction/<answers>")
+# def prediction_gif(answers):
+#     prediction = grid_search.make_prediction(answers)
+#     return prediction
 
 # @app.route('/questions')
 # def next_button():
