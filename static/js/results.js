@@ -8,7 +8,7 @@ $(document).ready(function(){
         $("#btnSubmit").removeAttr('style');
     });
     $("#btnSubmit").click(function(){
-        var answers = [];
+        var answers = {};
         if ($("#sel1").val() == '') {
             alert('Please select a value from the drop down for question 1.');
             return;
@@ -50,47 +50,50 @@ $(document).ready(function(){
             return;
         }
 
-        answers.push($("#sel1").val());
-        answers.push($("#sel2").val());
-        answers.push($("#sel3").val());
-        answers.push($("#sel4").val());
-        answers.push($("#sel5").val());
-        answers.push($("#sel6").val());
-        answers.push($("#sel7").val());
-        answers.push($("#sel8").val());
-        answers.push($("#sel9").val());
-        answers.push($("#sel10").val());
+        // answers.push($("#sel1").val());
+        // answers.push($("#sel2").val());
+        // answers.push($("#sel3").val());
+        // answers.push($("#sel4").val());
+        // answers.push($("#sel5").val());
+        // answers.push($("#sel6").val());
+        // answers.push($("#sel7").val());
+        // answers.push($("#sel8").val());
+        // answers.push($("#sel9").val());
+        // answers.push($("#sel10").val());
 
-        // answers['Q40'] = $("#sel1").val()
-        // answers['Q38'] = $("#sel2").val()
-        // answers['Q12'] = $("#sel3").val()
-        // answers['Q19'] = $("#sel4").val()
-        // answers['Q16'] = $("#sel5").val()
-        // answers['Q18'] = $("#sel6").val()
-        // answers['Q20'] = $("#sel7").val()
-        // answers['Q15'] = $("#sel8").val()
-        // answers['Q9'] = $("#sel9").val()
-        // answers['Q36'] = $("#sel10").val()
+        answers['Q40'] = parseInt($("#sel1").val())
+        answers['Q38'] = parseInt($("#sel2").val())
+        answers['Q12'] = parseInt($("#sel3").val())
+        answers['Q19'] = parseInt($("#sel4").val())
+        answers['Q16'] = parseInt($("#sel5").val())
+        answers['Q18'] = parseInt($("#sel6").val())
+        answers['Q20'] = parseInt($("#sel7").val())
+        answers['Q15'] = parseInt($("#sel8").val())
+        answers['Q9'] = parseInt($("#sel9").val())
+        answers['Q36'] = parseInt($("#sel10").val())
 
         console.log('answers:', answers)
 
-       
-        // function make_prediction(userAnswers){
-            d3.json(`/prediction/${answers}`).then((data) => {
-                var predictor= data;
+        // userAnswers = answers.join('')
 
-                if (predictor=1){
-                    var gif_url = 'https://tenor.com/view/avocado-love-cute-hearts-kiss-gif-17628872'
-                    console.log('couple should get married')
-                }
-                else {
-                    var gif_url = 'https://bestanimations.com/uploads/gifs/832552745broken-heart-animation13.gif'
-                    console.log('couple should break up')
-                }
-            })    
+        // console.log('user', userAnswers)
+
+        // $.post('/prediction', {'userAnswers':answers})
         
 
-        // make_prediction(answers);
+       
+        function make_prediction(answers){
+            d3.json('/prediction', {
+                method:'POST', 
+                body:JSON.stringify(answers),
+                headers: {"Content-type": "application/json; charset=UTF-8"}
+            }).then((data) => {
+                var gif_url = data;
+                console.log(gif_url)
+            })    
+        
+        }    
+        make_prediction(answers);
     });
 });
 

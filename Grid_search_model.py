@@ -75,7 +75,7 @@ def make_prediction(answers):
     pred_columns = X.columns
 
     #Transposing list of answers to dataframe to match model shape
-    pred_df = pd.DataFrame(answers)
+    pred_df = pd.DataFrame(answers).transpose()
     pred_df.columns = pred_columns
 
     # making prediction on new data
