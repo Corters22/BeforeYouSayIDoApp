@@ -5,23 +5,25 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/static/css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="results.js"></script>
+    <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+    
+ 
     
 </head>
-<body style="overflow:hidden;background-image: url('pink.jpg');background-size:cover;background-repeat:no-repeat;font-family: 'Trirong', serif';">
+<body style="overflow:hidden;background-image: url('/static/images/pink.jpg');background-size:cover;background-repeat:no-repeat;font-family: 'Trirong', serif';">
 
     <div class="navbarmenu" id="navigation">
 
         <div style="text-align:center;">
             <div style="font-size: 25px;font-weight:bold;">
-                <a class="menuitem mr-3" href="data.html" style="color: darkblue;">Home</a>
-                <a class="menuitem mr-3" href="data.html" style="color: darkblue;">Data</a>
-                <a class="menuitem mr-3" href="data.html" style="color: darkblue;">Visualizations</a>
+                <a class="menuitem mr-3" href="/" style="color: darkblue;">Home</a>
+                <a class="menuitem mr-3" href="/api/divorcedata" style="color: darkblue;">Data</a>
+                <a class="menuitem mr-3" href="/visualizations" style="color: darkblue;">Visualizations</a>
                 <a class="menuitem" href="Comparison.html" style="color: darkblue;">Full Test</a>
             </div>
         </div>
@@ -34,9 +36,9 @@
         <div id='page1'>
             <div class="d-flex flex-wrap justify-content-center mt-3"><span style="font-size: 35px;font-weight: bold;color:darkblue;">Is your relationship going to last?</span></div>
             <div class="d-flex flex-wrap justify-content-center mt-3"><span style="font-size: 35px;font-weight: bold;color:darkblue;">Take this short test to find out!</span></div>
-            <div class="d-flex flex-wrap justify-content-center mt-3"><input id='next' type="button" style="font-size: 30px;font-weight: bold;color:darkblue;background-color: hotpink;" value="Click Here"></input></div>
+            <div class="d-flex flex-wrap justify-content-center mt-3"><input id='next' type="button" style="font-size: 30px;font-weight: bold;color:darkblue;background-color: hotpink;" value="Click Here" name='Next button'></input></div>
         </div>
-        <div id='page2' class="d-flex flex-wrap justify-content-center mt-3" style="visibility: hidden;height: 0px;">
+        <div id='page2' class="d-flex flex-wrap justify-content-center mt-3" style="visibility: hidden;">
             <div>
                 <table>
                     <tr>
@@ -66,7 +68,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>Q3: If one of us apologizes when our discussion deteriorates, the discussion ends.</td>
+                        <td>Q3: My spouse and I have similar values in terms of personal freedom.</td>
                         <td>
                             <select class="form-control" id="sel3">
                                 <option value=""></option>
@@ -172,8 +174,22 @@
                 </table>
             </div>
         </div>
-        <div id='btnSubmit' class="d-flex flex-wrap justify-content-center" style="visibility:hidden;"><button type="button" class="btn btn-success">Submit</button></div>
+        
+        <div id='btnSubmit' class="d-flex flex-wrap justify-content-center" style="visibility:hidden;"><button id='btnSubmit' type="button" class="btn btn-success">Submit</button></div>
+        <div id='page3' class="d-flex flex-wrap justify-content-center mt-3" style="visibility: hidden;">
+            <!-- <p class="d-flex flex-wrap justify-content-center mt-3"><span style="font-size: 35px;font-weight: bold;color:darkblue;">Is your relationship going to last?</span></p> -->
+            <!-- <p><div style='height:20px;width:20px;' class="tenor-gif-embed" data-postid="17628872" data-share-method="host" data-width="100%" data-aspect-ratio="1.0"><a href="https://tenor.com/view/avocado-love-cute-hearts-kiss-gif-17628872">Avocado Love GIF</a> from <a href="https://tenor.com/search/avocado-gifs">Avocado GIFs</a></div></p> -->
+            <img src="../static/images/avocado_love.gif" alt="Avocado_love">
+        </div>
     </div>
+
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
+    <!-- <script src="/js/functions.js"></script> -->
+    <script src="../static/js/results.js"></script>
+    
 </body>
+
+
 </html>
 
