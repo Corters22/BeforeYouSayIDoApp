@@ -50,16 +50,6 @@ $(document).ready(function(){
             return;
         }
 
-        // answers.push($("#sel1").val());
-        // answers.push($("#sel2").val());
-        // answers.push($("#sel3").val());
-        // answers.push($("#sel4").val());
-        // answers.push($("#sel5").val());
-        // answers.push($("#sel6").val());
-        // answers.push($("#sel7").val());
-        // answers.push($("#sel8").val());
-        // answers.push($("#sel9").val());
-        // answers.push($("#sel10").val());
 
         answers['Q40'] = parseInt($("#sel1").val())
         answers['Q38'] = parseInt($("#sel2").val())
@@ -71,36 +61,6 @@ $(document).ready(function(){
         answers['Q15'] = parseInt($("#sel8").val())
         answers['Q9'] = parseInt($("#sel9").val())
         answers['Q36'] = parseInt($("#sel10").val())
-
-        // console.log('answers:', answers)
-
-        // userAnswers = answers.join('')
-
-        // console.log('user', userAnswers)
-
-        // $.post('/prediction', {'userAnswers':answers})
-        
-    });
-    // function make_prediction(userAnswers){
-            // d3.json(`/prediction/${answers}`).then((data) => {
-            //     var gif_url= data;
-
-            //     // if (predictor=1){
-            //     //     var gif_url = 'https://tenor.com/view/avocado-love-cute-hearts-kiss-gif-17628872'
-            //     //     console.log('couple should get married')
-            //     // }
-            //     // else {
-            //     //     var gif_url = 'https://bestanimations.com/uploads/gifs/832552745broken-heart-animation13.gif'
-            //     //     console.log('couple should break up')
-            //     // }
-            // }) 
-
-            // return gif_url
-
-            // return 'https://tenor.com/view/avocado-love-cute-hearts-kiss-gif-17628872'
-    // }
-                
-
        
         function make_prediction(answers){
             d3.json('/prediction', {
@@ -110,10 +70,18 @@ $(document).ready(function(){
             }).then((data) => {
                 var gif_url = data;
                 console.log(gif_url)
+                $("#result").attr('src', gif_url);
+                $("#page2").attr('style', 'visibility:hidden;height:0;');
+                $("#btnSubmit").attr('style', 'visibility:hidden');
+                $("#page3").removeAttr('style');
+                
             })    
-        
+            
         }    
         make_prediction(answers);
     });
-});
+    
+        
+    });
+
 
