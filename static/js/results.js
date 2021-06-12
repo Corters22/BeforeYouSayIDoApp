@@ -8,7 +8,7 @@ $(document).ready(function(){
         $("#btnSubmit").removeAttr('style');
     });
     $("#btnSubmit").click(function(){
-         answers = [];
+        var answers = {};
         if ($("#sel1").val() == '') {
             alert('Please select a value from the drop down for question 1.');
             return;
@@ -50,41 +50,35 @@ $(document).ready(function(){
             return;
         }
 
-        alert('test')
+        // answers.push($("#sel1").val());
+        // answers.push($("#sel2").val());
+        // answers.push($("#sel3").val());
+        // answers.push($("#sel4").val());
+        // answers.push($("#sel5").val());
+        // answers.push($("#sel6").val());
+        // answers.push($("#sel7").val());
+        // answers.push($("#sel8").val());
+        // answers.push($("#sel9").val());
+        // answers.push($("#sel10").val());
 
-        answers.push($("#sel1").val());
-        answers.push($("#sel2").val());
-        answers.push($("#sel3").val());
-        answers.push($("#sel4").val());
-        answers.push($("#sel5").val());
-        answers.push($("#sel6").val());
-        answers.push($("#sel7").val());
-        answers.push($("#sel8").val());
-        answers.push($("#sel9").val());
-        answers.push($("#sel10").val());
-
-        // var url = make_prediction(answers);
-        var url = 'https://tenor.com/view/avocado-love-cute-hearts-kiss-gif-17628872';
-        
-        $("#result").attr('src', url);
-        $("#page2").attr('style', 'visibility:hidden;height:0;');
-        $("#btnSubmit").attr('style', 'visibility:hidden');
-        $("#page3").removeAttr('style');
-
-        // answers['Q40'] = $("#sel1").val()
-        // answers['Q38'] = $("#sel2").val()
-        // answers['Q12'] = $("#sel3").val()
-        // answers['Q19'] = $("#sel4").val()
-        // answers['Q16'] = $("#sel5").val()
-        // answers['Q18'] = $("#sel6").val()
-        // answers['Q20'] = $("#sel7").val()
-        // answers['Q15'] = $("#sel8").val()
-        // answers['Q9'] = $("#sel9").val()
-        // answers['Q36'] = $("#sel10").val()
+        answers['Q40'] = parseInt($("#sel1").val())
+        answers['Q38'] = parseInt($("#sel2").val())
+        answers['Q12'] = parseInt($("#sel3").val())
+        answers['Q19'] = parseInt($("#sel4").val())
+        answers['Q16'] = parseInt($("#sel5").val())
+        answers['Q18'] = parseInt($("#sel6").val())
+        answers['Q20'] = parseInt($("#sel7").val())
+        answers['Q15'] = parseInt($("#sel8").val())
+        answers['Q9'] = parseInt($("#sel9").val())
+        answers['Q36'] = parseInt($("#sel10").val())
 
         // console.log('answers:', answers)
 
-       
+        // userAnswers = answers.join('')
+
+        // console.log('user', userAnswers)
+
+        // $.post('/prediction', {'userAnswers':answers})
         
     });
     // function make_prediction(userAnswers){
@@ -107,6 +101,19 @@ $(document).ready(function(){
     // }
                 
 
-        // make_prediction(answers);
+       
+        function make_prediction(answers){
+            d3.json('/prediction', {
+                method:'POST', 
+                body:JSON.stringify(answers),
+                headers: {"Content-type": "application/json; charset=UTF-8"}
+            }).then((data) => {
+                var gif_url = data;
+                console.log(gif_url)
+            })    
+        
+        }    
+        make_prediction(answers);
+    });
 });
 

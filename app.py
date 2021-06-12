@@ -4,13 +4,13 @@ from project import Divorce_Data
 import pandas as pd
 import numpy as np
 import joblib
-import Grid_search_model 
+# import Grid_search_model 
 
 #################################################
 # Database Setup
 #################################################   
 data = Divorce_Data()
-grid_search = Grid_search_model
+# grid_search = Grid_search_model
 #################################################
 # Flask Setup
 #################################################
@@ -43,10 +43,23 @@ def api_list():
 def demo():
     return jsonify(data.questions())
 
-# @app.route("/prediction/<answers>")
-# def prediction_gif(answers):
-#     prediction = grid_search.make_prediction(answers)
-#     return prediction
+@app.route("/prediction", methods=['GET', 'POST'])
+def prediction_gif():
+    if request.method == 'POST':
+        answers = [request.get_json()]
+        df = pd.DataFrame(answers)
+        predictions = model.predict(df)
+        print(predictions)
+        if predictions ==1:
+            gif_url = 'static/images/avocado_love.gif'
+        else:
+            gif_url = 'static/images/broken_heart.gif'
+      
+    else:
+        gif_url = 'error'
+    
+    return jsonify(gif_url)
+    
 
 # @app.route('/questions')
 # def next_button():
