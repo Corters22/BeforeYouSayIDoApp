@@ -22,7 +22,13 @@ The application is run off of Flask through Python, so if you download all the f
 
 For those that should stay together - ![avocado](static/images/avocado_love.gif)
 
+
 For those that should possibly break up - ![heart](static/images/broken_heart.gif)[2](2)
 
 If you would like to see where you compare to other couples that have answered the same questions, you can click on the visualizations tab and see a chart that shows every question and how many divorced or married couples answered that question. The extra annotation is your answer. You can also add to the dataset by clicking on the Full Test tab and answering all 54 questions. This will be added to our database to retrain the model with more information.
 
+## Application examples
+
+![div gif](static/images/app_div_result.gif)
+
+![mar gif](static/images/app_mar_result.gif)
