@@ -8,7 +8,19 @@ About 50% of marriages end in divorce. With this kind of statistic, it would be 
 
 # Data
 
-The dataset contains 54 questions, 170 subjects, and their answers to the questions. Of the 170 subjects, 84 were divorced and 86 were happily married. Happily married was defined as "those with happy marriages, without any thought of divorce." [1](1) The answers to each question can be one of the five following choices: **0**=Never, **1**=Seldom, **2**=Averagely, **3**=Frequently, **4**=Always. The 'Divorce' column is either a **1**=Happily Married or **0**=Divorced. The full dataset can be found [here](https://www.kaggle.com/andrewmvd/divorce-prediction). The exact questions that the subjects were asked can be found in this file [reference.tsv](reference.tsv). This study was done in Turkey, so some of the questions did not translate well to English. We adjusted those questions using proper grammar and changing gender pronouns so that the question worked with either spouse. 
+  - Contains 54 questions, 170 subjects, and their answers to the questions
+  - Of the 170 subjects, 84 were divorced and 86 were happily married
+  - Happily married was defined as "those with happy marriages, without any thought of divorce." [1](1) 
+  - The answers to each question can be one of the five following choices: 
+      - **0**=Never
+      - **1**=Seldom
+      - **2**=Averagely
+      - **3**=Frequently
+      - **4**=Always
+  - The 'Divorce' column is either a **1**=Happily Married or **0**=Divorced
+  - The full dataset can be found [here](https://www.kaggle.com/andrewmvd/divorce-prediction)
+  - The exact questions that the subjects were asked can be found in this file [reference.tsv](reference.tsv). 
+      - This study was done in Turkey, so some of the questions did not translate well to English. We adjusted those questions using proper grammar and changing gender pronouns         so that the question worked with either spouse. 
 
 # Prediction model
 
@@ -32,3 +44,6 @@ If you would like to see where you compare to other couples that have answered t
 ![div gif](static/images/app_div_result.gif)
 
 ![mar gif](static/images/app_mar_result.gif)
+
+[1](https://dergipark.org.tr/tr/download/article-file/748448)
+[Disclaimer: This application is for entertainment purposes only. If you are experiencing issues within your relationship, please contact a mental health professional for guidance](2)
