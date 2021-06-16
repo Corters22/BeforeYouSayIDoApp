@@ -5,7 +5,17 @@ $(document).ready(function(){
         $("#page1").hide();
         $("#header").attr('style','margin-top: 50px;')
         $("#page2").removeAttr('style');
-        // $("#btnSubmit").removeAttr('style');
+
+    });
+    $("#cont").click(function(){
+        $("#page1").hide();
+        $("#page2").hide();
+        $("#page3").hide();
+        $("#result").hide();
+        $("#header").attr('style','visibility: hidden; height: 0px;')
+        $("#page4").removeAttr('style');
+        $('#contTable').removeAttr('style');
+
     });
     $("#btnSubmit").click(function(){
         var answers = {};
