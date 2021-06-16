@@ -3,14 +3,14 @@
 
 # Background 
 
-About 50% of marriages end in divorce. With this kind of statistic, it would be helpful to have a "test" to see if you and your loved one are going to make it. This test is based on the "Divorce Predictors Scale (DPS) on the basis of Gottman couples therapy."[1](1) According to Gottman, there are four predictors of divorce, which he called the "four horseman of the apocalypse. Gottman describes them as Criticism, Contempt, Stonewalling and Defensiveness (Gottman, 2014; Gottman and Gottman, 2012)." [1](1) From these factors and other empirical research, Yöntem, M , Adem, K , İlhan, T , Kılıçarslan, S. (2019) tested and wrote "DIVORCE PREDICTION USING CORRELATION BASED FEATURE SELECTION AND ARTIFICIAL NEURAL NETWORKS". Nevşehir Hacı Bektaş Veli University SBE Dergisi, 9 (1), 259-273. You can find the link to the paper [here](https://dergipark.org.tr/tr/download/article-file/748448). This paper not only includes the prediction algorithms the team used but also the demographics of the subjects.
+About 50% of marriages end in divorce. With this kind of statistic, it would be helpful to have a "test" to see if you and your loved one are going to make it. This test is based on the "Divorce Predictors Scale (DPS) on the basis of Gottman couples therapy."[1](1) According to Gottman, there are four predictors of divorce, which he called the "four horseman of the apocalypse. Gottman describes them as Criticism, Contempt, Stonewalling and Defensiveness (Gottman, 2014; Gottman and Gottman, 2012)." [1][1] From these factors and other empirical research, Yöntem, M , Adem, K , İlhan, T , Kılıçarslan, S. (2019) tested and wrote "DIVORCE PREDICTION USING CORRELATION BASED FEATURE SELECTION AND ARTIFICIAL NEURAL NETWORKS". Nevşehir Hacı Bektaş Veli University SBE Dergisi, 9 (1), 259-273. You can find the link to the paper [here](https://dergipark.org.tr/tr/download/article-file/748448). This paper not only includes the prediction algorithms the team used but also the demographics of the subjects.
 
 
 # Data
 
   - Contains 54 questions, 170 subjects, and their answers to the questions
   - Of the 170 subjects, 84 were divorced and 86 were happily married
-  - Happily married was defined as "those with happy marriages, without any thought of divorce." [1](1) 
+  - Happily married was defined as "those with happy marriages, without any thought of divorce." [1][1] 
   - The answers to each question can be one of the five following choices: 
       - **0**=Never
       - **1**=Seldom
@@ -35,7 +35,7 @@ The application is run off of Flask through Python, so if you download all the f
 For those that should stay together - ![avocado](static/images/avocado_love.gif)
 
 
-For those that should possibly break up - ![heart](static/images/broken_heart.gif)[2](2)
+For those that should possibly break up - ![heart](static/images/broken_heart.gif)[2][2]
 
 If you would like to see where you compare to other couples that have answered the same questions, you can click on the visualizations tab and see a chart that shows every question and how many divorced or married couples answered that question. The extra annotation is your answer. You can also add to the dataset by clicking on the Full Test tab and answering all 54 questions. This will be added to our database to retrain the model with more information.
 
@@ -45,5 +45,5 @@ If you would like to see where you compare to other couples that have answered t
 
 ![mar gif](static/images/app_mar_result.gif)
 
-[1](https://dergipark.org.tr/tr/download/article-file/748448)
-[Disclaimer: This application is for entertainment purposes only. If you are experiencing issues within your relationship, please contact a mental health professional for guidance](2)
+[1]: (https://dergipark.org.tr/tr/download/article-file/748448)
+[2]: Disclaimer: This application is for entertainment purposes only. If you are experiencing issues within your relationship, please contact a mental health professional for guidance.
