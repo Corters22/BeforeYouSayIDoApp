@@ -61,15 +61,12 @@ def prediction_gif():
     return jsonify(gif_url)
     
 
-# @app.route('/questions')
-# def next_button():
-#     if request.method == 'POST':
-#         if request.form['Next button'] == 'Click Here':
-#             request.form['#page2']
 
-# @app.route('/visualizations')
-# def visualizations():
-#     return charts
+
+@app.route('/visualizations')
+def visualizations():
+    return render_template('viz.html')
+
 
 if __name__ == '__main__':
     app.run(debug=True)
