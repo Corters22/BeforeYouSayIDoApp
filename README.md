@@ -57,6 +57,7 @@ Using Tableau public, we added a visualization to show the count of each importa
 
   - Vijeta (Karkera) Puthran
        - [Github](https://github.com/VijetaPuthran)
+       - [LinkedIn](www.linkedin.com/in/vijeta-k-57642639)
   - Courtney Gomez
        - [Github](https://github.com/Corters22)
        - [LinkedIn](https://www.linkedin.com/in/courtney-gomez-winfrey-34119a13/)
