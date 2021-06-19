@@ -8,7 +8,14 @@ About 50% of marriages end in divorce. With this kind of statistic, it would be 
 
 # Data
 
-The dataset contains 54 questions, 170 subjects, and their answers to the questions. Of the 170 subjects, 84 were divorced and 86 were happily married. Happily married was defined as "those with happy marriages, without any thought of divorce." [1](1) The answers to each question can be one of the five following choices: **0**=Never, **1**=Seldom, **2**=Averagely, **3**=Frequently, **4**=Always. The 'Divorce' column is either a **1**=Happily Married or **0**=Divorced. The full dataset can be found [here](https://www.kaggle.com/andrewmvd/divorce-prediction). The exact questions that the subjects were asked can be found in this file [reference.tsv](reference.tsv). This study was done in Turkey, so some of the questions did not translate well to English. We adjusted those questions using proper grammar and changing gender pronouns so that the question worked with either spouse. 
+   - Dataset contains 54 questions, 170 subjects, and their answers to the questions
+   - Of the 170 subjects, 84 were divorced and 86 were happily married. 
+      - Happily married was defined as "those with happy marriages, without any thought of divorce." [1](1) 
+  - Answer choices: **0**=Never, **1**=Seldom, **2**=Averagely, **3**=Frequently, **4**=Always
+  - 'Divorce' column is either a **1**=Happily Married or **0**=Divorced
+  - The full dataset can be found [here](https://www.kaggle.com/andrewmvd/divorce-prediction)
+  - The exact questions that the subjects were asked can be found in this file [reference.tsv](reference.tsv)
+     - This study was done in Turkey, so some of the questions did not translate well to English. We adjusted those questions using proper grammar and changing gender pronouns so that the question worked with either spouse. 
 
 # Prediction model
 
@@ -20,15 +27,47 @@ The prediction model is run in the application and since the original data had 5
 
 The application is run off of Flask through Python, so if you download all the files, you can fun the application locally. Or you can go [here](heroku app) and share it with others. If you choose to take the test, you will recieve an answer in gif form.
 
-For those that should stay together - ![avocado](static/images/avocado_love.gif)
+For those that should stay together - ![mar gif](static/images/app_mar_result.gif)
 
 
-For those that should possibly break up - ![heart](static/images/broken_heart.gif)[2](2)
+For those that should possibly break up - ![div gif](static/images/app_div_result.gif)[2](2) 
 
-If you would like to see where you compare to other couples that have answered the same questions, you can click on the visualizations tab and see a chart that shows every question and how many divorced or married couples answered that question. The extra annotation is your answer. You can also add to the dataset by clicking on the Full Test tab and answering all 54 questions. This will be added to our database to retrain the model with more information.
+If you would like to see where you compare to other couples that have answered the same questions, you can click on the visualizations tab and see a chart that shows every question and how many divorced or married couples answered that question. 
 
-## Application examples
+Deployed on web using Heroku. Click [here](https://beforeyousayido.herokuapp.com/) to open the application.
 
-![div gif](static/images/app_div_result.gif)
+## Visualization
 
-![mar gif](static/images/app_mar_result.gif)
+Using Tableau public, we added a visualization to show the count of each important feature question. It is also filterable by Happily Married or Divorced to see how the subjects differ in their answers. The question, itself, was too long to add on the x-axis, so its abbreviated. Its also in the same order as the questions on the application. Below is a screen shot of the visualization. 
+
+![screenshot](static/images/screenshot_visual.PNG)
+
+## Future Additions
+
+   - Full set of questions
+   - Answers to the questions added to database to retrain model
+   - Additional annotation to visualizations to indicate user's choice
+
+
+## Contributers
+
+  - Vijeta (Karkera) Puthran
+       - [Github](https://github.com/VijetaPuthran)
+  - Courtney Gomez
+       - [Github](https://github.com/Corters22)
+       - [LinkedIn](https://www.linkedin.com/in/courtney-gomez-winfrey-34119a13/)
+  - Mary Scruggs
+      - [Github](https://github.com/mcasiano1)
+  - Anna Sanchez
+      - [Github](https://github.com/LOT60)
+
+
+### References
+
+[1](1) - https://dergipark.org.tr/tr/download/article-file/748448
+
+[2](2) - Disclaimer: This application is for entertainment purposes only. If you are experiencing issues in your relationship, please seek guidance from a mental health professional.
+
+
+
+
