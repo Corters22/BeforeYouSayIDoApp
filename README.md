@@ -27,10 +27,10 @@ The prediction model is run in the application and since the original data had 5
 
 The application is run off of Flask through Python, so if you download all the files, you can fun the application locally. Or you can go [here](heroku app) and share it with others. If you choose to take the test, you will recieve an answer in gif form.
 
-For those that should stay together - ![mar gif](static/images/app_mar_result.gif)
+For those that should stay together -![mar gif](static/images/app_mar_result.gif)
 
 
-For those that should possibly break up - ![div gif](static/images/app_div_result.gif)[2](2) 
+For those that should possibly break up -![div gif](static/images/app_div_result.gif)[2](2) 
 
 If you would like to see where you compare to other couples that have answered the same questions, you can click on the visualizations tab and see a chart that shows every question and how many divorced or married couples answered that question. 
 
